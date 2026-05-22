@@ -1,0 +1,27 @@
+# CODEOWNERS — accesorios-dm-inventory-service
+#
+# IMPORTANTE: Crear los equipos en GitHub antes de activar require_code_owner_reviews:
+#   - @D-M-Accesorios/leads      → arquitectos / tech leads
+#   - @D-M-Accesorios/backend    → desarrolladores backend
+
+# Propietario por defecto
+*                                   @D-M-Accesorios/leads
+
+# Infraestructura
+Dockerfile                          @D-M-Accesorios/leads
+docker-compose.yml                  @D-M-Accesorios/leads
+
+# Build y dependencias Maven
+pom.xml                             @D-M-Accesorios/leads
+
+# Workflows CI/CD
+.github/                            @D-M-Accesorios/leads
+
+# Configuración de la aplicación — contiene datasource, JPA, puertos
+src/main/resources/                 @D-M-Accesorios/leads @D-M-Accesorios/backend
+
+# Código fuente Java
+src/main/java/                      @D-M-Accesorios/backend @D-M-Accesorios/leads
+
+# Tests
+src/test/                           @D-M-Accesorios/backend
